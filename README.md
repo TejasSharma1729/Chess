@@ -27,7 +27,7 @@ PWN1 - PWN8 [Left to right]
 KNT1 - KNT2 [left to right]
 BSP1 - BSP2 [Left to right]
 ROK1 - ROK2 [Left to right]
-QWN1 - QWN9 [Original 1, 2-9 pawn promotions]
+QWN0 - QWN8 [Original 0, 1-8 from pawn promotions]
 KING
 ```
 
