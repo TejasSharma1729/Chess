@@ -5,7 +5,7 @@ Two player interactive chess mode (Player vs Computer not supported)
 
 Enter your move in the format
 ```
-playerName > MOV <piece> <destinationsq>
+playerName > MOVE <piece> <destinationsq>
 ```
 OR
 ```
@@ -23,10 +23,14 @@ Note that there is no allowance for retracing of moves. Once a move is done, it 
 
 The pieces are numbered
 ```
-PWN1 - PWN8 [Left to right, with white as bottom]
-KNT1 - KNT2 [Starting left and right]
-BSP1 - BSP2 [Starting left and right]
-ROK1 - ROK2 [Starting left and right]
+PWN1 - PWN8 [Left to right]
+KNT1 - KNT2 [left to right]
+BSP1 - BSP2 [Left to right]
+ROK1 - ROK2 [Left to right]
 QWN1 - QWN9 [Original 1, 2-9 pawn promotions]
 KING
 ```
+
+The tiles are numbered A1 - H8. Here A - H numbering means left to right and 1 - 8 bottom to top.
+
+As usual, white starts at the bottom (rows 1 and 2) with black at top (rows 7 and 8), both spanning all 8 columns (A - H) with kings at E1 or E8.
