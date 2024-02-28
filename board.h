@@ -1,5 +1,8 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
+#include <array>
 
 class board {
     struct piece_t {
@@ -23,19 +26,19 @@ class board {
 
     // Grid[i][j] = square at column j and row i.
     // Label : <char[j]>i like Grid[8][5] = E8. So on.
-    vector<vector<piece_t>> grid;
+    std::array<std::array<piece_t, 9>, 9> grid;
     struct coords {
         int8_t on;
         int8_t row; // The i of Grid[i][j]
         int8_t col; // The j of Grid[i][j]
     };
-    map<piece_t, coords> pieces;
+    std::map<piece_t, coords> pieces;
 
 public:
     board() {
-        grid.resize(9, vector<piece_t>());
-        for (int8_t i = 1; i < 9; i++)
-            grid[i].resize(9, {0, 0, 0});
+        for (int8_t i = 0; i < 9; i++)
+            for (int8_t j = 0; j < 9; j++)
+                grid[i][j] = {0, 0, 0};
 
         for (int8_t i = 1; i < 9; i++) {
             // PAWNS
@@ -144,5 +147,5 @@ public:
         }
         printf("    \n");
     }
-    void getMove(string s);
+    void getMove(std::string s);
 };
